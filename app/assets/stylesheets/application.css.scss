@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+@import 'normalize-rails';
+@import 'bourbon';
+@import 'base/grid-settings';
+@import 'neat';
+@import 'base/base';
+@import 'home';
+@import 'members';
+@import 'footer';
+
+body {
+  background-color: #88888888;
+  margin: $gutter (2 * $gutter) $gutter (2 * $gutter);
+}
