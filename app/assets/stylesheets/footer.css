@@ -1,4 +1,5 @@
 .centered-navigation {
+  margin-bottom: $gutter;
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;

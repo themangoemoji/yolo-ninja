@@ -92,50 +92,44 @@
       <h3>"Josh spends most of his freetime doing freelance drum work."</h3>
       </br>
       </br>
-      <p>Drum Synthesizer Component
-      
-      </br>
-      Implemented by: Joshua Folks
-      
-      </br>
-      Functions:
-      
+      <p>
+
       </br>
       "The Drum Synthesizer is composed of many functions, when added together, create various sounds that are sampled from a real life drum. The synthesizer works by loading 20 different drum samples at the very beginning of the program. The tutorial that was given in class was very helpful to complete this component. The files are then saved in a wavetable and played from the wave player class. The waveÕs are then loaded back from the Drum Factory. When playing the samples of the drum, they are enveloped, from Drum Envelope, in order to avoid the pop/click at the end of each sample. For the pitch, I made the sample much faster based on the user input. 
-      
+
       </br>
       The Drum Synthesizer is able to create its own synthetic drum sound that correlates to a specific drum sound. The pitch is set by the user and this initiates the synthetic sound. The synthetic drum sound is made by starting with a base sine wave as a note, adding random waves as "white noise" to this sine wave, creating a sweeping effect that increases the frequency of the sine wave at the beginning of the wave and decreases the frequency at end, and finally, putting this wave through an envelope that adds Attack and Release processing to the sine wave.
-      
+
       </br>
       Supporting the waveform playback, envelope generation, polyphony, and 21 different drum sounds including the synthesized drum, the Drum Synthesizer Component is complete with every requirement implemented."
-      
+
       </br>
-      
+
       <h5>Drum Synthesizer Score Format:</h5>
-      
+
       <p>
       < note measure="1" beat=Ò1.0Ó note=ÒC1Ó pitch =Ò2Ó />
-      
+
       </br>
       This is the simple format that is used to write the score of the drum. The initial note will come after the instrument is declared as ÒDrumÓ. The measure, beat, and note are all very basic parameters for the score file. The pitch parameter is an optional value that you can set to vary the pitch of the particular sound. When the pitch is set on the score file the actual synthesized drum is built and played at the varied pitch that the user has chosen. The notes of the drum synthesizer are correlated with the actual sound of a drum that is being loaded in. 
-      
+
       </br>
-        Cymbal = C ex. C1 = cymbal1
+      Cymbal = C ex. C1 = cymbal1
       </br>
-        Bass = B   ex. B1 = bass1
+      Bass = B   ex. B1 = bass1
       </br>
-        Tom1 = A   ex. A1 = tom11
+      Tom1 = A   ex. A1 = tom11
       </br>
-        Tom2 = D   ex. D1 = tom21
+      Tom2 = D   ex. D1 = tom21
       </br>
-        Snare = S  ex. S1 = snare1
+      Snare = S  ex. S1 = snare1
       </br>
-      
+
       All of the notes are in the solution folder and are saved as a .wav file.</p>
       </br>
       </br>
       </br>
-      <p>Boom. Drop the mic.</p>
+      <p>BOOM *Drops the mic*</p>
     </div>
 
     <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Joshua Johnson</a>
@@ -144,9 +138,9 @@
       </br>
       </br>
       <p>The effects change the output from all of the instruments in the synthesizer.</p>
-      
+
       <h5>
-      Effects score options:
+        Effects score options:
       </h5>
       <p>
       gateWet
@@ -165,59 +159,52 @@
       </br>
       chorusDry
       </p>
-      
+
       <p>
       "For a given note from another instrument given as follows:
       < note measure="1" beat="1" duration="1" note="B4" dynamic ="1.0"/>
-      
+
       The flange effect would be implemented as follows:
       < note measure="1" beat="1" duration="1" note="B4" dynamic ="1.0" flangeWet="1.0" flangeDry="0.0"/>
-      
+
       Each option is used with a decimal value typically ranging from 0.0 to 1.0. The value can exceed 1.0, which would result in a gain of greater than 1.
-      
+
       If no specification is made for any effect, it is given the default value of xDry = 1, xWet = 0, which causes no effect to be applied.
       </br>
       Implementation details:
       I created a class for each effect (Gate, Compress, Flange, and Chorus). If more time was available, these would have been refactored and would include a base class for the Effects. Also, Flange and Chorus would have been made into a single class or at least have their own base class, since their implementation is nearly identical.
-      
+
       The implementation for Chorus and Flange were discussed in preparation for the exam; these use a sine wave to vary the selection location of sounds recently generated.
-      
+
       The Gate and Compress effects simply do calculations on the current value of the sound generated, whether limiting or increasing the sound, depending on the effect.
-      
+
       For integrating the effects into the system, each instrument was allocated an instance of each effect. This was done so that effects could be individually applied to meet the requirement for Controllable effects. This allows for dynamic and fully selectable effects sends."</p>
       </br>
       </br>
       <p>Josh is a world renowned effects mixer and we were he could take a break from his worldwide trap music tour to help us with our synth.</p>
     </div>
+    <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab5">Michael Wright</a>
+    <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
+      <h3>"My contribution to this project borders on genius."</h3>
+      </br>
+      </br>
+      <p>
+      The wavetable I implemented uses attack and release, enveloping, and looping. Or at least it did until one of my group members and I had a horrific merge error that resulted in me having to re-implement all of my classes that inevitably did not work together. 
+      </br>
+      Until that point it played 5 different awesome sounds! One drum riff, and 4 sweet guitar riffs. 
+      </br>
+      </p>
+      <h5>The format that I used for this was:</h5>
+      <p>
+      < note measure="1" beat="1" duration="2" note="C4" attack="1.0" release="0.05"/>
+
+      </br>
+      The tutorials and previous step assignments were very helpful for this project. The files are then saved in a wavetable and played from the wave player class. The waves are then loaded back from the Wavetable Factory. When playing the samples of the drum, they are enveloped, from Wavetable Envelope, in order to avoid the pop/click at the end of each sample. For the pitch, I made the sample much faster based on the user input. 
+</br>
+The wavetable also is smart enough to loop over samples that have durations specified for longer than their lengths.  
+      </p>
+      </br>
+      </br>
+      <p>At least I made this super dope website.</p>
+    </div>
   </div>
-  <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab5">Michael Wright</a>
-  <div id="tab5" class="js-vertical-tab-content vertical-tab-content">
-    <h3>"My contribution to this project borders on genius."</h3>
-    </br>
-    </br>
-    <p>
-    "For a given note from another instrument given as follows:
-    < note measure="1" beat="1" duration="1" note="B4" dynamic ="1.0"/>
-
-    The flange effect would be implemented as follows:
-    < note measure="1" beat="1" duration="1" note="B4" dynamic ="1.0" flangeWet="1.0" flangeDry="0.0"/>
-
-    Each option is used with a decimal value typically ranging from 0.0 to 1.0. The value can exceed 1.0, which would result in a gain of greater than 1.
-
-    If no specification is made for any effect, it is given the default value of xDry = 1, xWet = 0, which causes no effect to be applied.
-    </br>
-    Implementation details:
-    I created a class for each effect (Gate, Compress, Flange, and Chorus). If more time was available, these would have been refactored and would include a base class for the Effects. Also, Flange and Chorus would have been made into a single class or at least have their own base class, since their implementation is nearly identical.
-
-    The implementation for Chorus and Flange were discussed in preparation for the exam; these use a sine wave to vary the selection location of sounds recently generated.
-
-    The Gate and Compress effects simply do calculations on the current value of the sound generated, whether limiting or increasing the sound, depending on the effect.
-
-    For integrating the effects into the system, each instrument was allocated an instance of each effect. This was done so that effects could be individually applied to meet the requirement for Controllable effects. This allows for dynamic and fully selectable effects sends."</p>
-    </br>
-    </br>
-    <p>Josh is a world renowned effects mixer and we were he could take a break from his worldwide trap music tour to help us with our synth.</p>
-  </div>
-</div>
-
-<br>
